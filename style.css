@@ -1,0 +1,131 @@
+		body{
+			margin:0;
+			padding: 0;
+			background-color: #fffaf4;
+		}
+		.background{
+			width: 100%;
+			min-height: 125vh;
+			/*height: 100%;*/
+			/*padding-bottom: 20px;*/
+			display: flex;
+			position: absolute;
+			/*background: linear-gradient(-45deg, #ee5425, #e71364, #089acf, #0bcea0);*/
+			background: #fffaf4;
+		}
+		img{
+			width: 80%;
+			position: relative;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		
+		.content{
+			/*position: absolute;*/
+			width: 100%;
+			z-index: 999;
+			background: transparent;
+		}
+		.up{
+			width: 100%;
+			position: relative;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		#welcome{
+			font-weight: 800;
+			color: rgb(255, 186, 108);
+		}
+		.up h2{
+			font-weight: 600;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			color: #808000;
+		}
+		button{
+			box-sizing: border-box;
+			border-radius: 10px;
+			color: rgb(250, 137, 62);
+			background: #fff;
+			font-weight: 400;
+			padding: 10px;
+			margin: 4px;
+			border-style: solid;
+			border-color: rgb(250, 137, 62);
+			outline: none important;
+			outline-width: 0 important;
+		}
+		button:focus{
+			outline: none important;
+			outline-width: 0 important;
+		}
+		.up p{
+			font-size: 18px;
+			font-weight: 600;
+			color: #808000;
+			background-color: rgba(255,255,255,0.5);
+		}
+		a{
+			color: rgb(250, 137, 62);
+			text-decoration: none;
+		}
+		a:hover{
+			color: rgb(250, 137, 62);
+			text-decoration: none;
+		}
+		.item{
+			box-sizing: border-box;
+			border-style: solid;
+			border-color: #fff;
+			border-radius: 10px;
+			min-width: 250px;
+			height: auto;
+			padding: 10px;
+			text-align: center;
+			color: rgb(54, 104, 21);
+			background-color: #e4e2e2;
+			margin: 10px;
+			text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+		}
+		.item h5{
+			position: relative;
+			margin-bottom: 1px;
+			bottom: 0;
+			color: #000;
+			opacity: 0.3;
+		}
+		.mplayer{
+			width: 90%;
+			height: auto;
+			background-color: #fffaf4;
+			color: #808000;
+			box-sizing: border-box;
+			border-radius: 10px;
+			box-shadow: 2px rgba(0,0,0,0.6);
+			z-index: 500;
+		}
+		#stressedquotes, #stressedmusic, #stressedstory, #frustratedquotes, #frustratedmusic, #frustratedstory, #brokenquotes, #brokenmusic, #brokenstory, #happyquotes, #happymusic, #happystory, #insomquotes, #insommusic, #insomstory, #deppquotes, #deppmusic, #deppstory, #pessquotes, #pessmusic, #pessstory, #anxquotes, #anxmusic, #anxstory, #exciquotes, #excimusic, #excistory, #optiquotes, #optimusic, #optistory
+		{
+			height: auto;
+			width: 100%;
+			display: flex;
+			overflow-x: auto;	
+		}
+		::-webkit-scrollbar{
+			width: 3px;
+		}
+		#stressedsec, #stressedquotes, #stressedmusic, #stressedstory, #frustratedsec, #frustratedquotes, #frustratedmusic, #frustratedstory, #brokensec, #brokenquotes, #brokenmusic, #brokenstory, #happysec, #happyquotes, #happymusic, #happystory, #insomsec, #insomquotes, #insommusic, #insomstory, #deppsec, #deppquotes, #deppmusic, #deppstory, #pesssec, #pessquotes, #pessmusic, #pessstory, #anxsec, #anxquotes, #anxmusic, #anxstory, #excisec, #exciquotes, #excimusic, #excistory, #optisec, #optiquotes, #optimusic, #optistory{
+			width: 90%;
+			position: absolute;
+			/*top: 20%;
+			left: 45%;
+			/*margin: -25px 0 0 -25px;*/
+		}
+		.footer{
+			position: relative;
+			display: flex;
+			margin: 0 auto;
+			text-align: center;
+			bottom: 0;
+		}

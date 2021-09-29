@@ -1,0 +1,352 @@
+<html>
+	<head>
+		<title>Mediheal</title>
+		<!--responsive layout-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--linking bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<!--linking fontawesome-->
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body>
+		<a href="mood.html"><i class="fa fa-arrow-circle-left fa-3x" style="color: #808000;margin-top: 20px; margin-left: 20px;"></i></a>
+		<div class="background">
+			<img src="svg2.jpg">
+		</div>
+		<div class="content">
+			<div class="up">
+				<h1 id="welcome"></h1>
+				<a href="quote.html"><button style="box-sizing: border-box;border-style: dotted;border-color: rgb(250, 137, 62);border-width: 3px;margin-right: 20px;height: 40px;width: 40px;border-radius: 60px;float: right; background: transparent;"><i class="fa fa-diamond" style="margin:0 auto;color: #808000;"></i></button></a>
+				<br>
+				<h2>How's your mood today?</h2>
+					<button id="stressed" onclick="stressed()">Stressed</button>
+					<button id="frustrated" onclick="frustrated()">Frustrated</button>
+					<button id="heartbroken" onclick="heartbroken()">Heart broken</button>
+					<button id="happy" onclick="happy()">Happy</button>
+					<button id="insomnia" onclick="insomnia()">Insomniatic</button>
+					<button id="depressed" onclick="depressed()">Depressed</button>
+					<button id="pesimistic" onclick="pesimistic()">Pesimistic</button>
+					<button id="anxious" onclick="anxious()">Anxious</button>
+					<button id="excited" onclick="excited()">Excited</button>
+					<button id="optimistic" onclick="optimistic()">Optimistic</button>
+				<br>
+				<br>
+				<p id="outcome"></p>
+				<br>
+					<p id="todo"></p>
+				<br>
+				<div id="menu" style="display: none;">
+					<button id="quotes">Motivational Quotes</button>
+					<button id="music">Peacefull sound and music</button>
+					<button id="story">Bed-time stories</button>
+					<button id="medi"><a href="meditate.html">Meditate</a></button>
+				</div>
+			</div>
+
+			<div class="down">
+				<!--for stressed-->
+	<center>
+		<div id="stressedsec" style="visibility: hidden; margin-left: 10%; margin-top: 20px;">
+			<div id="stressedquotes" style="visibility: hidden;">
+				<div class="item">Your performance is not guaranteed but effort is.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Get the beast within you alive.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Take risks to know the boundaries of life.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Life is meant to experience not just to pay bills.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">The best way to predict the future is to invent it.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="stressedmusic" style="visibility: hidden;">
+				<div class="mplayer">
+					<h2 id="title" style="color: #000; font-weight: 300px;">Singing Bowl</h2>
+					<h5 id="number" style="opacity: 0.6;">Music 1</h5>
+					<audio id="aud1" src="audio.mp3" hidden="true"></audio>
+					<button id="btn1" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for stressed mind</p>
+				</div>
+			</div>
+			<div id="stressedstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>Your performance is not guaranteed but effort is.Get the beast within you alive.Take risks to know the boundaries of life.Life is meant to experience not just to pay bills.</div>
+				<div class="item"><h4>Story 2</h4>Your performance is not guaranteed but effort is.Get the beast within you alive.Take risks to know the boundaries of life.Life is meant to experience not just to pay bills.</div>
+				<div class="item"><h4>Story 3</h4>Your performance is not guaranteed but effort is.Get the beast within you alive.Take risks to know the boundaries of life.Life is meant to experience not just to pay bills.</div>
+				<div class="item"><h4>Story 4</h4>Your performance is not guaranteed but effort is.Get the beast within you alive.Take risks to know the boundaries of life.Life is meant to experience not just to pay bills.</div>
+				<div class="item"><h4>Story 5</h4>Your performance is not guaranteed but effort is.Get the beast within you alive.Take risks to know the boundaries of life.Life is meant to experience not just to pay bills.</div>
+			</div>
+		</div>
+	</center>
+		<!--for frustrated-->
+		<center>
+			<div id="frustratedsec" style="visibility: hidden;margin-left: 10%; margin-top: 20px;">
+			<div id="frustratedquotes" style="visibility: hidden;">
+				<div class="item">Make your anger, fuel for desire.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Adopt the pace of nature: her secret is patience.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Never give the remote of your life to someone else.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Obstackles are those frightful things you see when you take your eyes off your goal.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Don't be football of other's opinion.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="frustratedmusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Om chanting</h2>
+					<h5 style="opacity: 0.6;">Music 2</h5>
+					<audio id="aud2" src="audio2.mp3" hidden="true"></audio>
+					<button id="btn2" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play1" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for frustrated mind</p>
+				</div>
+			</div>
+			<div id="frustratedstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>Make your anger, fuel for desire.Adopt the pace of nature: her secret is patience.Never give the remote of your life to someone else.Obstackles are those frightful things you see when you take your eyes off your goal.</div>
+				<div class="item"><h4>Story 2</h4>Make your anger, fuel for desire.Adopt the pace of nature: her secret is patience.Never give the remote of your life to someone else.Obstackles are those frightful things you see when you take your eyes off your goal.</div>
+				<div class="item"><h4>Story 3</h4>Make your anger, fuel for desire.Adopt the pace of nature: her secret is patience.Never give the remote of your life to someone else.Obstackles are those frightful things you see when you take your eyes off your goal.</div>
+				<div class="item"><h4>Story 4</h4>Make your anger, fuel for desire.Adopt the pace of nature: her secret is patience.Never give the remote of your life to someone else.Obstackles are those frightful things you see when you take your eyes off your goal.</div>
+				<div class="item"><h4>Story 4</h4>Make your anger, fuel for desire.Adopt the pace of nature: her secret is patience.Never give the remote of your life to someone else.Obstackles are those frightful things you see when you take your eyes off your goal.</div>
+			</div>
+		</div>	
+		</center>
+		<!--for heartbroken-->
+		<center>
+		<div id="brokensec" style="visibility: hidden;margin-left: 10%; margin-top: 10px;">
+			<div id="brokenquotes" style="visibility: hidden;">
+				<div class="item">No matter how bad your heart is broken, the world never stops for your grief.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Courage is the power to let go of the familiar.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Cry.Forgive.Learn.Move on.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Let your tears water the seeds of your future happiness.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Sadness flies away on the wing of.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="brokenmusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Saranga raga</h2>
+					<h5 style="opacity: 0.6;">Music 5</h5>
+					<audio id="aud3" src="audio5.mp3" hidden="true"></audio>
+					<button id="btn3" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play2" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for broken mind</p>
+				</div>
+			</div>
+			<div id="brokenstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>No matter how bad your heart is broken, the world never stops for your grief.Courage is the power to let go of the familiar.Cry.Forgive.Learn.Move on.Let your tears water the seeds of your future happiness.</div>
+				<div class="item"><h4>Story 2</h4>No matter how bad your heart is broken, the world never stops for your grief.Courage is the power to let go of the familiar.Cry.Forgive.Learn.Move on.Let your tears water the seeds of your future happiness.</div>
+				<div class="item"><h4>Story 3</h4>No matter how bad your heart is broken, the world never stops for your grief.Courage is the power to let go of the familiar.Cry.Forgive.Learn.Move on.Let your tears water the seeds of your future happiness.</div>
+				<div class="item"><h4>Story 4</h4>No matter how bad your heart is broken, the world never stops for your grief.Courage is the power to let go of the familiar.Cry.Forgive.Learn.Move on.Let your tears water the seeds of your future happiness.</div>
+				<div class="item"><h4>Story 5</h4>No matter how bad your heart is broken, the world never stops for your grief.Courage is the power to let go of the familiar.Cry.Forgive.Learn.Move on.Let your tears water the seeds of your future happiness.</div>
+			</div>
+		</div>
+	</center>
+		<!--for happy-->
+		<center>
+		<div id="happysec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="happyquotes" style="visibility: hidden;">
+				<div class="item">Happiness is a direction not a place.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">The true secret of happiness lies in the taking a genuine interest in all details of daily life.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Finding happiness in small things is the real turnover of life.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Happiness is not an ideal of reason,but of imagination.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">The secret of happiness is freedom. The secret of freedom is courage.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="happymusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Time flow</h2>
+					<h5 style="opacity: 0.6;">Music 3</h5>
+					<audio id="aud4" src="audio3.mp3" hidden="true"></audio>
+					<button id="btn4" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play3" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for happy mind</p>
+				</div>
+			</div>
+			<div id="happystory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>Happiness is a direction not a place.The true secret of happiness lies in the taking a genuine interest in all details of daily life.Finding happiness in small things is the real turnover of life.Happiness is not an ideal of reason,but of imagination.</div>
+				<div class="item"><h4>Story 2</h4>Happiness is a direction not a place.The true secret of happiness lies in the taking a genuine interest in all details of daily life.Finding happiness in small things is the real turnover of life.Happiness is not an ideal of reason,but of imagination.</div>
+				<div class="item"><h4>Story 3</h4>Happiness is a direction not a place.The true secret of happiness lies in the taking a genuine interest in all details of daily life.Finding happiness in small things is the real turnover of life.Happiness is not an ideal of reason,but of imagination.</div>
+				<div class="item"><h4>Story 4</h4>Happiness is a direction not a place.The true secret of happiness lies in the taking a genuine interest in all details of daily life.Finding happiness in small things is the real turnover of life.Happiness is not an ideal of reason,but of imagination.</div>
+				<div class="item"><h4>Story 5</h4>Happiness is a direction not a place.The true secret of happiness lies in the taking a genuine interest in all details of daily life.Finding happiness in small things is the real turnover of life.Happiness is not an ideal of reason,but of imagination.</div>
+			</div>
+		</div>
+	</center>
+		<!--for insomniatic-->
+		<center>
+		<div id="insomsec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="insomquotes" style="visibility: hidden;">
+				<div class="item">Sleep is the only time when physicality engages to spirituality.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Quality sleep is te guarantee to quality produce.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">It's the periodic rest that your body needs not a manipulated wastage of time and effort.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Laugh and the world laughs with you, snore and you sleep alone.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">A timely nap takes pressure away.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="insommusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Om chanting</h2>
+					<h5 style="opacity: 0.6;">Music 2</h5>
+					<audio id="aud5" src="audio2.mp3" hidden="true"></audio>
+					<button id="btn5" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play4" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for insomniatic mind</p>
+				</div>
+			</div>
+			<div id="insomstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>Sleep is the only time when physicality engages to spirituality.Quality sleep is te guarantee to quality produce.It's the periodic rest that your body needs not a manipulated wastage of time and effort.Laugh and the world laughs with you, snore and you sleep alone.</div>
+				<div class="item"><h4>Story 2</h4>Sleep is the only time when physicality engages to spirituality.Quality sleep is te guarantee to quality produce.It's the periodic rest that your body needs not a manipulated wastage of time and effort.Laugh and the world laughs with you, snore and you sleep alone.</div>
+				<div class="item"><h4>Story 3</h4>Sleep is the only time when physicality engages to spirituality.Quality sleep is te guarantee to quality produce.It's the periodic rest that your body needs not a manipulated wastage of time and effort.Laugh and the world laughs with you, snore and you sleep alone.</div>
+				<div class="item"><h4>Story 4</h4>Sleep is the only time when physicality engages to spirituality.Quality sleep is te guarantee to quality produce.It's the periodic rest that your body needs not a manipulated wastage of time and effort.Laugh and the world laughs with you, snore and you sleep alone.</div>
+				<div class="item"><h4>Story 5</h4>Sleep is the only time when physicality engages to spirituality.Quality sleep is te guarantee to quality produce.It's the periodic rest that your body needs not a manipulated wastage of time and effort.Laugh and the world laughs with you, snore and you sleep alone.</div>
+			</div>
+		</div>
+	</center>
+		<!--for depressed-->
+		<center>
+		<div id="deppsec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="deppquotes" style="visibility: hidden;">
+				<div class="item">There is nothing stronger in the world than gentleness.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Faith is love taking the form of aspirations.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">It is in our darkest moments that we must focus to see the light.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">When deeds speak, words are nothing.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">If you don't run your life, somebody else will.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="deppmusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Mood elevator</h2>
+					<h5 style="opacity: 0.6;">Music 6</h5>
+					<audio id="aud6" src="audio6.mp3" hidden="true"></audio>
+					<button id="btn6" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play5" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for depressed mind</p>
+				</div>
+			</div>
+			<div id="deppstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>There is nothing stronger in the world than gentleness.Faith is love taking the form of aspirations.It is in our darkest moments that we must focus to see the light.When deeds speak, words are nothing.</div>
+				<div class="item"><h4>Story 2</h4>There is nothing stronger in the world than gentleness.Faith is love taking the form of aspirations.It is in our darkest moments that we must focus to see the light.When deeds speak, words are nothing.</div>
+				<div class="item"><h4>Story 3</h4>There is nothing stronger in the world than gentleness.Faith is love taking the form of aspirations.It is in our darkest moments that we must focus to see the light.When deeds speak, words are nothing.</div>
+				<div class="item"><h4>Story 4</h4>There is nothing stronger in the world than gentleness.Faith is love taking the form of aspirations.It is in our darkest moments that we must focus to see the light.When deeds speak, words are nothing.</div>
+				<div class="item"><h4>Story 5</h4>There is nothing stronger in the world than gentleness.Faith is love taking the form of aspirations.It is in our darkest moments that we must focus to see the light.When deeds speak, words are nothing.</div>
+			</div>
+		</div>
+	</center>
+		<!--FOR PESSIMISTIC-->
+		<center>
+		<div id="pesssec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="pessquotes" style="visibility: hidden;">
+				<div class="item">Noone in the world gets what they want and that is beautiful.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Hard times are only meant to give you the taste of upcoming goodtimes.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Being broke is temporary,your actions can define your next status.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">The only true wisdom is in knowing that you know nothing.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Our nature is the mind and mind is our nature.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="pessmusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Himalayan flute</h2>
+					<h5 style="opacity: 0.6;">Music 4</h5>
+					<audio id="aud7" src="audio4.mp3" hidden="true"></audio>
+					<button id="btn7" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play6" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for pessimistic mind</p>
+				</div>
+			</div>
+			<div id="pessstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>Noone in the world gets what they want and that is beautiful.Hard times are only meant to give you the taste of upcoming goodtimes.Being broke is temporary,your actions can define your next status.The only true wisdom is in knowing that you know nothing.</div>
+				<div class="item"><h4>Story 2</h4>Noone in the world gets what they want and that is beautiful.Hard times are only meant to give you the taste of upcoming goodtimes.Being broke is temporary,your actions can define your next status.The only true wisdom is in knowing that you know nothing.</div>
+				<div class="item"><h4>Story 3</h4>Noone in the world gets what they want and that is beautiful.Hard times are only meant to give you the taste of upcoming goodtimes.Being broke is temporary,your actions can define your next status.The only true wisdom is in knowing that you know nothing.</div>
+				<div class="item"><h4>Story 4</h4>Noone in the world gets what they want and that is beautiful.Hard times are only meant to give you the taste of upcoming goodtimes.Being broke is temporary,your actions can define your next status.The only true wisdom is in knowing that you know nothing.</div>
+				<div class="item"><h4>Story 5</h4>Noone in the world gets what they want and that is beautiful.Hard times are only meant to give you the taste of upcoming goodtimes.Being broke is temporary,your actions can define your next status.The only true wisdom is in knowing that you know nothing.</div>
+			</div>
+		</div>
+	</center>
+		<!--for anxious-->
+		<center>
+		<div id="anxsec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="anxquotes" style="visibility: hidden;">
+			<div class="item">Trust yourself.You've survived a lot and you will survive whatever is coming.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Smile , breathe and advance slowly.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Nothing diminishes anxiety faster than action.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Life is ten percent what you experinec and ninety percent how you respond to it.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Do not anticipate troble, or worry about what may never happen.Keep in the sunlight.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="anxmusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Singing bowl</h2>
+					<h5 style="opacity: 0.6;">Music 1</h5>
+					<audio id="aud8" src="audio.mp3" hidden="true"></audio>
+					<button id="btn8" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play7" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for anxious mind</p>
+				</div>
+			</div>
+			<div id="anxstory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>Trust yourself.You've survived a lot and you will survive whatever is coming.Smile , breathe and advance slowly.Nothing diminishes anxiety faster than action.Life is ten percent what you experinec and ninety percent how you respond to it.</div>
+				<div class="item"><h4>Story 2</h4>Trust yourself.You've survived a lot and you will survive whatever is coming.Smile , breathe and advance slowly.Nothing diminishes anxiety faster than action.Life is ten percent what you experinec and ninety percent how you respond to it.</div>
+				<div class="item"><h4>Story 3</h4>Trust yourself.You've survived a lot and you will survive whatever is coming.Smile , breathe and advance slowly.Nothing diminishes anxiety faster than action.Life is ten percent what you experinec and ninety percent how you respond to it.</div>
+				<div class="item"><h4>Story 4</h4>Trust yourself.You've survived a lot and you will survive whatever is coming.Smile , breathe and advance slowly.Nothing diminishes anxiety faster than action.Life is ten percent what you experinec and ninety percent how you respond to it.</div>
+				<div class="item"><h4>Story 5</h4>Trust yourself.You've survived a lot and you will survive whatever is coming.Smile , breathe and advance slowly.Nothing diminishes anxiety faster than action.Life is ten percent what you experinec and ninety percent how you respond to it.</div>
+			</div>
+		</div>
+	</center>
+		<!--for excited-->
+		<center>
+		<div id="excisec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="exciquotes" style="visibility: hidden;">
+			<div class="item">When you are excited, your body has trouble telling the difference between pain and pleasure.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Dreaming afterall is a form of planning without which we loose the excitement of possibilities.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">If you are changing the world, you're working on important things.You're excited to get up in the morning.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">No one can whistle a symphony.It takes a whole orchestra to play it.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">You change your life by changing your heart.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="excimusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Time flow</h2>
+					<h5 style="opacity: 0.6;">Music 3</h5>
+					<audio id="aud9" src="audio3.mp3" hidden="true"></audio>
+					<button id="btn9" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play8" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for excited mind</p>
+				</div>
+			</div>
+			<div id="excistory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>When you are excited, your body has trouble telling the difference between pain and pleasure.Dreaming afterall is a form of planning without which we loose the excitement of possibilities.If you are changing the world, you're working on important things.You're excited to get up in the morning.</div>
+				<div class="item"><h4>Story 2</h4>When you are excited, your body has trouble telling the difference between pain and pleasure.Dreaming afterall is a form of planning without which we loose the excitement of possibilities.If you are changing the world, you're working on important things.You're excited to get up in the morning.</div>
+				<div class="item"><h4>Story 3</h4>When you are excited, your body has trouble telling the difference between pain and pleasure.Dreaming afterall is a form of planning without which we loose the excitement of possibilities.If you are changing the world, you're working on important things.You're excited to get up in the morning.</div>
+				<div class="item"><h4>Story 4</h4>When you are excited, your body has trouble telling the difference between pain and pleasure.Dreaming afterall is a form of planning without which we loose the excitement of possibilities.If you are changing the world, you're working on important things.You're excited to get up in the morning.</div>
+				<div class="item"><h4>Story 5</h4>When you are excited, your body has trouble telling the difference between pain and pleasure.Dreaming afterall is a form of planning without which we loose the excitement of possibilities.If you are changing the world, you're working on important things.You're excited to get up in the morning.</div>
+			</div>
+		</div>
+	</center>
+		<!--for optimistic-->
+		<center>
+		<div id="optisec" style="visibility: hidden; margin-left: 10%; margin-top: 10px;">
+			<div id="optiquotes" style="visibility: hidden;">
+				<div class="item">He who has a why to live can bear almost anyhow.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">All life is an experiment.The more and early you make them the better.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">From the errors of others,a wise man corrects his own.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Discipline is the bridge between goals and accomplishments.<br><h5>Swipe for more quotes</h5></div>
+				<div class="item">Leader's don't create followers, they create more leaders.<br><h5>Swipe for more quotes</h5></div>
+			</div>
+			<div id="optimusic" style="visibility: hidden">
+				<div class="mplayer">
+					<h2 style="color: #000; font-weight: 300px;">Himalayan flute</h2>
+					<h5 style="opacity: 0.6;">Music 4</h5>
+					<audio id="aud10" src="audio4.mp3" hidden="true"></audio>
+					<button id="btn10" style="padding: 10px; box-sizing: border-box; border-radius: 10px; margin-bottom: 60px;"><i id="play9" class="fa fa-play fa-3x" style="color: #000;"></i></button>
+					<br>
+					<p style="color: #000; opacity: 0.3;">Peaceful music for optimistic mind</p>
+				</div>
+			</div>
+			<div id="optistory" style="visibility: hidden;">
+				<div class="item"><h4>Story 1</h4>He who has a why to live can bear almost anyhow.All life is an experiment.The more and early you make them the better.From the errors of others,a wise man corrects his own.Discipline is the bridge between goals and accomplishments.</div>
+				<div class="item"><h4>Story 2</h4>He who has a why to live can bear almost anyhow.All life is an experiment.The more and early you make them the better.From the errors of others,a wise man corrects his own.Discipline is the bridge between goals and accomplishments.</div>
+				<div class="item"><h4>Story 3</h4>He who has a why to live can bear almost anyhow.All life is an experiment.The more and early you make them the better.From the errors of others,a wise man corrects his own.Discipline is the bridge between goals and accomplishments.</div>
+				<div class="item"><h4>Story 4</h4>He who has a why to live can bear almost anyhow.All life is an experiment.The more and early you make them the better.From the errors of others,a wise man corrects his own.Discipline is the bridge between goals and accomplishments.</div>
+				<div class="item"><h4>Story 5</h4>He who has a why to live can bear almost anyhow.All life is an experiment.The more and early you make them the better.From the errors of others,a wise man corrects his own.Discipline is the bridge between goals and accomplishments.</div>
+			</div>
+		</div>
+	</center>
+			</div>
+		</div>
+		<!--<div class="footer">
+			<h4>Created with maintained by <a href="https://rajdip2852.dscnsec.com">Rajdip Mondal</a></h4>
+		</div>-->
+	</body>
+	<script src="mood.js"></script>
+	<script src="music.js"></script>
+	<script>
+		var name = prompt("How should we call you?");
+		document.getElementById("welcome").innerHTML="Hey "+name+" ,Glad to see you here!";
+	</script>
+</html>
