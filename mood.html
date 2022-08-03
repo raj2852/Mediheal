@@ -348,7 +348,14 @@
 	<script src="mood.js"></script>
 	<script src="music.js"></script>
 	<script>
+		if(sessionStorage.getItem('userName')===null){
 		var name = prompt("How should we call you?");
+		sessionStorage.setItem('userName', name);
 		document.getElementById("welcome").innerHTML="Hey "+name+" ,Glad to see you here!";
+	}
+		else{
+			let name = sessionStorage.getItem('userName');
+			document.getElementById("welcome").innerHTML="Hey "+name+" ,Glad to see you here!";
+		}
 	</script>
 </html>
